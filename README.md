@@ -1,4 +1,4 @@
-# CTF Blue41 RAG User App
+# Player server for RAG Attacker-Defender Game
 
 ## Getting Started
 
