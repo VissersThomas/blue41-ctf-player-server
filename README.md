@@ -17,7 +17,7 @@ Submit the public URL to [ctf.blue41.com](https://ctf.blue41.com).
 ### 3. Set up Python environment
 Create and activate a Python virtual environment:
 ```bash
-python -m venv venv
+python3 -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 ```
 
