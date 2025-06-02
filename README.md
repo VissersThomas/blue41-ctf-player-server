@@ -18,17 +18,22 @@ Submit the public URL to [ctf.blue41.com](https://ctf.blue41.com).
 Create and activate a Python virtual environment:
 ```bash
 python3 -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+source venv/bin/activate
 ```
 
-### 4. Run the server
+### 4. Install Python requirements
+```bash
+pip install -r requirements.txt 
+```
+
+### 5. Run the server
 You will need the Milvus connection details (which you'll get after creating your team on ctf.blue41.com), as well as an OPENAI API key.
 Execute the server setup script:
 ```bash
 python start_server.py
 ```
 
-### 5. Start playing
+### 6. Start playing
 Your application is now ready to use!
 
 ## Protect Your Application
