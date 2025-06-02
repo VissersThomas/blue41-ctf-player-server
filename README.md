@@ -22,7 +22,7 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 ```
 
 ### 4. Run the server
-You will need the Milvus connection details, as well as an OPENAI API key.
+You will need the Milvus connection details (which you'll get after creating your team on ctf.blue41.com), as well as an OPENAI API key.
 Execute the server setup script:
 ```bash
 python start_server.py
