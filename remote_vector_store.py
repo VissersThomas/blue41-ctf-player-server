@@ -26,8 +26,7 @@ def connect_to_remote_vector_db(embeddings=None):
 
     # Build connection args
     connection_args = {
-        "host": MILVUS_HOST,
-        "port": MILVUS_PORT,
+        "uri": MILVUS_HOST + ":" + MILVUS_PORT,
         "user": MILVUS_USER,
         "password": MILVUS_PASSWORD
     }
