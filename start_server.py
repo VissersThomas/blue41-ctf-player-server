@@ -44,7 +44,7 @@ def prompt_for_missing_vars(env_vars):
     # Check Milvus Host
     if not env_vars['MILVUS_HOST']:
         print("\nEnter the Milvus database domain:")
-        print("Examples: localhost, vdb.blue41.com, 192.168.1.100")
+        print("Examples: http://localhost, http://milvus.blue41.com")
         domain = input("Domain: ").strip()
         if domain:
             env_vars['MILVUS_HOST'] = domain
