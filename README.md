@@ -7,19 +7,7 @@ Follow these steps to set up and run the application:
 ### 1. Sign up for CTF
 Visit [ctf.blue41.com](https://ctf.blue41.com) and sign up, then create a new team.
 
-### 2. Set up Python environment
-Create and activate a Python virtual environment:
-```bash
-python3 -m venv venv
-source venv/bin/activate
-```
-
-### 3. Install Python requirements
-```bash
-pip install -r requirements.txt 
-```
-
-### 4. Start ngrok
+### 4. Set up ngrok
 
 1. Create ngrok account at [https://dashboard.ngrok.com/signup](https://dashboard.ngrok.com/signup)
 2. Fetch your ngrok auth token at [https://dashboard.ngrok.com/get-started/your-authtoken](https://dashboard.ngrok.com/get-started/your-authtoken)
@@ -33,6 +21,7 @@ docker run -it -e NGROK_AUTHTOKEN=your-ngrok-auth-token ngrok/ngrok:latest http 
 ```bash
 docker run --net=host -it -e NGROK_AUTHTOKEN=your-ngrok-auth-token ngrok/ngrok:latest http 8999
 ```
+
 4. Submit the endpoint for your team on [ctf.blue41.com](https://ctf.blue41.com) (e.g. https://2a79-178-51-98-11.ngrok-free.app)
 
 ### 5. Get and set your Milvus (vector db) credentials
@@ -48,10 +37,19 @@ LANGSMITH_API_KEY=your-langsmith-key # Optional
 LANGSMITH_TRACING=true # Optional
 ```
 ### 5. Run the server
-You will need the Milvus connection details (which you'll get after creating your team on ctf.blue41.com), as well as an OPENAI API key.
 Execute the server setup script:
 ```bash
-python start_server.py
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+
+python app.py
+```
+
+Alternatively (if you have trouble setting up), you can use **Docker** instead.
+
+```bash
+docker build -t ctf-player . && docker run -p 8999:8999 --env-file .env ctf-player
 ```
 
 ### 6. Start playing
