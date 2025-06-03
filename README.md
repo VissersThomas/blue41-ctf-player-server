@@ -7,24 +7,25 @@ Follow these steps to set up and run the application:
 ### 1. Sign up for CTF
 Visit [ctf.blue41.com](https://ctf.blue41.com) and sign up, then create a new team.
 
-### 2. Start ngrok
-Start your ngrok tunnel:
-```bash
-python start_ngrok.py
-```
-Submit the public URL to [ctf.blue41.com](https://ctf.blue41.com).
-
-### 3. Set up Python environment
+### 2. Set up Python environment
 Create and activate a Python virtual environment:
 ```bash
 python3 -m venv venv
 source venv/bin/activate
 ```
 
-### 4. Install Python requirements
+### 3. Install Python requirements
 ```bash
 pip install -r requirements.txt 
 ```
+
+### 4. Start ngrok
+Start your ngrok tunnel:
+```bash
+python start_ngrok.py
+```
+Submit the public URL to [ctf.blue41.com](https://ctf.blue41.com).
+
 
 ### 5. Run the server
 You will need the Milvus connection details (which you'll get after creating your team on ctf.blue41.com), as well as an OPENAI API key.
