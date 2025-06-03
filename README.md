@@ -26,7 +26,17 @@ python start_ngrok.py
 ```
 Submit the public URL to [ctf.blue41.com](https://ctf.blue41.com).
 
-
+You will get the milvus credentials. Create a .env file (if it didn't exist yet). Add the milvus credentials to it. Also add your OpenAI API key.
+```bash
+MILVUS_HOST=host
+MILVUS_PORT=port
+MILVUS_USER=user_
+MILVUS_PASSWORD=pass_
+COLLECTION_NAME=kb_
+OPENAI_API_KEY=your-openai-key
+LANGSMITH_API_KEY=your-langsmith-key # Optional
+LANGSMITH_TRACING=true # Optional
+```
 ### 5. Run the server
 You will need the Milvus connection details (which you'll get after creating your team on ctf.blue41.com), as well as an OPENAI API key.
 Execute the server setup script:
@@ -44,3 +54,4 @@ Configure your input guardrails policy `config/config.yml`.
 Kill (CTRL+C) and restart the server with `python start_server.py` for changes to take effect.
 
 ⚠️ **Warning**: Only minimal downtime is allowed when restarting. Applications must remain available for other contestants.
+
