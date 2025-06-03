@@ -25,11 +25,11 @@ pip install -r requirements.txt
 2. Fetch your ngrok auth token at [https://dashboard.ngrok.com/get-started/your-authtoken](https://dashboard.ngrok.com/get-started/your-authtoken)
 3. Start the ngrok tunnel on your machine using docker (fill in your auth token)
 
-MacOS and Windows:
+*MacOS and Windows*:
 ```bash
 docker run -it -e NGROK_AUTHTOKEN=your-ngrok-auth-token ngrok/ngrok:latest http host.docker.internal:8999
 ```
-Linux:
+*Linux*:
 ```bash
 docker run --net=host -it -e NGROK_AUTHTOKEN=your-ngrok-auth-token ngrok/ngrok:latest http 8999
 ```
