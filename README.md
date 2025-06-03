@@ -24,11 +24,13 @@ pip install -r requirements.txt
 1. Create ngrok account at [https://dashboard.ngrok.com/signup](https://dashboard.ngrok.com/signup)
 2. Fetch your ngrok auth token at [https://dashboard.ngrok.com/get-started/your-authtoken](https://dashboard.ngrok.com/get-started/your-authtoken)
 3. Start the ngrok tunnel on your machine using docker (fill in your auth token)
-```bash
-MacOS and Windows:
-docker run -it -e NGROK_AUTHTOKEN=your-ngrok-auth-token ngrok/ngrok:latest http host.docker.internal:8999
 
+MacOS and Windows:
+```bash
+docker run -it -e NGROK_AUTHTOKEN=your-ngrok-auth-token ngrok/ngrok:latest http host.docker.internal:8999
+```
 Linux:
+```bash
 docker run --net=host -it -e NGROK_AUTHTOKEN=your-ngrok-auth-token ngrok/ngrok:latest http 8999
 ```
 4. Submit the endpoint for your team on [ctf.blue41.com](https://ctf.blue41.com) (e.g. https://2a79-178-51-98-11.ngrok-free.app)
