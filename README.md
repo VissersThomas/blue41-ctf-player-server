@@ -35,7 +35,8 @@ docker run --net=host -it -e NGROK_AUTHTOKEN=your-ngrok-auth-token ngrok/ngrok:l
 ```
 4. Submit the endpoint for your team on [ctf.blue41.com](https://ctf.blue41.com) (e.g. https://2a79-178-51-98-11.ngrok-free.app)
 
-You will get the milvus credentials. Create a .env file (if it didn't exist yet). Add the milvus credentials to it. Also add your OpenAI API key.
+### 5. Get and set your Milvus (vector db) credentials
+Once you submit and endpoint on ctf.blue41.com, you will get the milvus credentials. Create a .env file (if it didn't exist yet). Add the milvus credentials to it. Also add your OpenAI API key.
 ```bash
 MILVUS_HOST=host
 MILVUS_PORT=port
