@@ -8,10 +8,15 @@ Follow these steps to set up and run the application:
 Visit [ctf.blue41.com](https://ctf.blue41.com) and sign up, then create a new team.
 
 ### 2. Set up ngrok
+This exposes will expose your local port on a publically accessible URL.
 
 1. Create ngrok account at [https://dashboard.ngrok.com/signup](https://dashboard.ngrok.com/signup)
 2. Copy your ngrok auth token at [https://dashboard.ngrok.com/get-started/your-authtoken](https://dashboard.ngrok.com/get-started/your-authtoken)
-3. Start the ngrok tunnel on your machine using Docker (fill in your auth token)
+3. Start the ngrok tunnel on your machine
+```bash
+NGROK_AUTHTOKEN=xxxxxx ngrok http 8999
+```
+Alternatively, start the ngrok tunnel via Docker.
 
 *MacOS and Windows*:
 ```bash
