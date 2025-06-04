@@ -8,7 +8,7 @@ Follow these steps to set up and run the application:
 Visit [ctf.blue41.com](https://ctf.blue41.com) and sign up, then create a new team.
 
 ### 2. Set up ngrok
-This exposes will expose your local port on a publically accessible URL.
+Ngrok will expose your local port on a publicly accessible URL. You have two options: start locally or use Docker!
 
 1. Create ngrok account at [https://dashboard.ngrok.com/signup](https://dashboard.ngrok.com/signup)
 2. Copy your ngrok auth token at [https://dashboard.ngrok.com/get-started/your-authtoken](https://dashboard.ngrok.com/get-started/your-authtoken)
@@ -16,7 +16,7 @@ This exposes will expose your local port on a publically accessible URL.
 ```bash
 NGROK_AUTHTOKEN=xxxxxx ngrok http 8999
 ```
-Alternatively, start the ngrok tunnel via Docker.
+__Alternatively__, start the ngrok tunnel via __Docker__.
 
 *MacOS and Windows*:
 ```bash
@@ -42,6 +42,8 @@ LANGSMITH_API_KEY=your-langsmith-key # Optional
 LANGSMITH_TRACING=true # Optional
 ```
 ### 4. Run the server
+Start serving the application locally (it defaults to port 8999). You have two options: start locally or use Docker!
+
 Execute the server setup script:
 ```bash
 python3 -m venv venv
@@ -51,7 +53,7 @@ pip install -r requirements.txt
 python app.py
 ```
 
-Alternatively (if you have trouble setting up), you can use **Docker** instead.
+__Alternatively__ (if you have trouble setting up), you can use **Docker** instead.
 
 ```bash
 docker build -t ctf-player . && docker run -p 8999:8999 --env-file .env ctf-player
