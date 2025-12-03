@@ -66,7 +66,7 @@ Your application is now ready to use!
 
 ### Input Guardrails
 Configure your input guardrails policy `config/config.yml`. 
-Kill (CTRL+C) and restart the server with `python start_server.py` for changes to take effect.
+Kill (CTRL+C) and restart the server with `python app.py` for changes to take effect.
 
 ⚠️ **Warning**: Only minimal downtime is allowed when restarting. Applications must remain available for other contestants.
 
