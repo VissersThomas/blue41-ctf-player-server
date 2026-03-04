@@ -7,29 +7,9 @@ Follow these steps to set up and run the application:
 ### 1. Sign up for CTF
 Visit [ctf.blue41.com](https://ctf.blue41.com) and sign up, then create a new team.
 
-### 2. Set up ngrok
-Ngrok will expose your local port on a publicly accessible URL. You have two options: start locally or use Docker!
+Submit the endpoint for your team on [ctf.blue41.com](https://ctf.blue41.com). Don't forget to add the port 8999. (e.g. Team 3 would submit `https://team3.blue41.com:8999`)
 
-1. Create ngrok account at [https://dashboard.ngrok.com/signup](https://dashboard.ngrok.com/signup)
-2. Copy your ngrok auth token at [https://dashboard.ngrok.com/get-started/your-authtoken](https://dashboard.ngrok.com/get-started/your-authtoken)
-3. Start the ngrok tunnel on your machine
-```bash
-NGROK_AUTHTOKEN=xxxxxx ngrok http 8999
-```
-__Alternatively__, start the ngrok tunnel via __Docker__.
-
-*MacOS and Windows*:
-```bash
-docker run -it -e NGROK_AUTHTOKEN=xxxxxx ngrok/ngrok:latest http host.docker.internal:8999
-```
-*Linux*:
-```bash
-docker run --net=host -it -e NGROK_AUTHTOKEN=xxxxxx ngrok/ngrok:latest http 8999
-```
-
-4. Submit the endpoint for your team on [ctf.blue41.com](https://ctf.blue41.com) (e.g. https://2a79-178-51-98-11.ngrok-free.app)
-
-### 3. Get and set your Milvus (vector db) credentials
+### 2. Get and set your Milvus (vector db) credentials
 Once you submit an endpoint on ctf.blue41.com, you will get the milvus credentials. Create a .env file (if it didn't exist yet). Add the milvus credentials to it. Also add your OpenAI API key.
 ```bash
 MILVUS_HOST=host
@@ -41,7 +21,7 @@ OPENAI_API_KEY=your-openai-key
 LANGSMITH_API_KEY=your-langsmith-key # Optional
 LANGSMITH_TRACING=true # Optional
 ```
-### 4. Run the server
+### 3. Run the server
 Start serving the application locally (it defaults to port 8999). You have two options: start locally or use Docker!
 
 Execute the server setup script:
@@ -59,7 +39,7 @@ __Alternatively__ (if you have trouble setting up), you can use **Docker** inste
 docker build -t ctf-player . && docker run -p 8999:8999 --env-file .env ctf-player
 ```
 
-### 5. Start playing
+### 4. Start playing
 Your application is now ready to use!
 
 ## Protect Your Application
